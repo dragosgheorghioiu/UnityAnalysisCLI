@@ -1,0 +1,3 @@
+/home/dregos/CLionProjects/tool/cmake-build-debug/CMakeFiles/tool.dir
+/home/dregos/CLionProjects/tool/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dregos/CLionProjects/tool/cmake-build-debug/CMakeFiles/rebuild_cache.dir
