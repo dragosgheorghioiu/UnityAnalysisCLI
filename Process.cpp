@@ -4,20 +4,18 @@ Process::Process(int argc, char **argv) {
     args = std::make_unique<Args>(argc, argv);
 }
 
-void Process::printChildrenRecursively(const std::filesystem::path &dirPath, const int &indents) {
+void Process::populateScenePaths(std::filesystem::path &dirPath) {
+    dirPath /= "Assets";
+    dirPath /= "Scenes";
     try {
         if (std::filesystem::is_directory(dirPath)) {
             for (const auto &entry: std::filesystem::directory_iterator(dirPath)) {
-                for (int i = 0; i < indents; i++) {
-                    std::cout << "    ";
-                }
-                std::cout << entry.path().filename() << std::endl;
-                if (entry.is_directory()) {
-                    printChildrenRecursively(entry.path(), indents + 1);
+                if (entry.path().filename().extension() == ".unity") {
+                    scenes.emplace_back(entry.path().string(), std::vector<GameObject>());
                 }
             }
         } else {
-            std::cout << "The provided directory is not a path" << std::endl;
+            std::cout << "The provided directory is not a valid Unity Project." << std::endl;
         }
     } catch (const std::filesystem::filesystem_error &e) {
         std::cerr << "[ERROR]: " << e.what() << std::endl;
@@ -25,5 +23,16 @@ void Process::printChildrenRecursively(const std::filesystem::path &dirPath, con
 }
 
 void Process::run() {
-    printChildrenRecursively(args->getArgsList()[0], 0);
+    std::filesystem::path dirPath(args->getArgsList()[0]);
+    populateScenePaths(dirPath);
+    for (auto &scene: scenes) {
+        SceneAnalyzer analyzer(scene.getScenePath());
+        scene.setChildren(analyzer.analyzeScene());
+    }
+    for (auto &scene: scenes) {
+        std::cout << scene.getScenePath() << std::endl;
+        for (auto &gameObject: scene.getChildren()) {
+            std::cout << gameObject.getName() << std::endl;
+        }
+    }
 }
