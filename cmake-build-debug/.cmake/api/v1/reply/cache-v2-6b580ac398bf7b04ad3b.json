@@ -1172,6 +1172,18 @@
 			],
 			"type" : "STATIC",
 			"value" : "/home/dregos/CLionProjects/tool"
+		},
+		{
+			"name" : "yaml-cpp_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for yaml-cpp."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/cmake/yaml-cpp"
 		}
 	],
 	"kind" : "cache",

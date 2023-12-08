@@ -221,6 +221,9 @@ tool_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 tool_SOURCE_DIR:STATIC=/home/dregos/CLionProjects/tool
 
+//The directory containing a CMake configuration file for yaml-cpp.
+yaml-cpp_DIR:PATH=/usr/lib/cmake/yaml-cpp
+
 
 ########################
 # INTERNAL cache entries
