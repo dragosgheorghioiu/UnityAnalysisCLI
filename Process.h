@@ -19,8 +19,11 @@ public:
     Process(int argc, char **argv);
     void populateScenePaths(std::filesystem::path &dirPath);
     void populateSceneChildren();
-    void printGameObjects();
     void run();
+    void createOutputDirectory();
+    static void printChild(const std::string &child, const std::map<int, GameObject> &gameObjectMap,
+                    const int &depth, std::ofstream &fout);
+    void printSceneHierarchy(const Scene &scene, std::ofstream &fout);
 };
 
 

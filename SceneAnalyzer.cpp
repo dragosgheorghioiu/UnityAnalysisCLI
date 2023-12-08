@@ -13,6 +13,10 @@ void SceneAnalyzer::parseYamlDocument(YAML::Node doc, std::vector<GameObject>& g
     }
 
     if (doc["Transform"] && afterGameObject) {
+        afterGameObject = false;
+        if (doc["Transform"]["m_Father"])
+            (gameObjects.end() - 1)->setParentId(doc["Transform"]["m_Father"]["fileID"].as<std::string>());
+        else (gameObjects.end() - 1)->setParentId("0");
         if (!doc["Transform"]["m_Children"])
             return;
         for (YAML::detail::iterator_value child: doc["Transform"]["m_Children"]) {
@@ -20,8 +24,6 @@ void SceneAnalyzer::parseYamlDocument(YAML::Node doc, std::vector<GameObject>& g
         }
         return;
     }
-
-    afterGameObject = false;
 }
 
 std::string SceneAnalyzer::getFileId(const std::string &line) {
@@ -49,4 +51,13 @@ std::vector<GameObject> SceneAnalyzer::analyzeScene() {
         }
     }
     return gameObjects;
+}
+
+std::map<int, GameObject>
+SceneAnalyzer::getGameObjectMap(const std::vector<GameObject> &gameObjects) {
+    std::map<int, GameObject> gameObjectMap;
+    for (GameObject gameObject: gameObjects) {
+        gameObjectMap.emplace(gameObject.getId(), gameObject);
+    }
+    return gameObjectMap;
 }
