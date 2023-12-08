@@ -18,8 +18,8 @@ private:
 public:
     Scene(const std::string& path, const std::vector<GameObject>& children);
     std::vector<GameObject> getChildren();
-    void setChildren(const std::vector<GameObject>& vector);
     std::filesystem::path getScenePath();
+    void setChildren(const std::vector<GameObject>& vector);
 };
 
 

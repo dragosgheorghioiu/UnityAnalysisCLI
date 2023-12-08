@@ -18,6 +18,8 @@ private:
 public:
     Process(int argc, char **argv);
     void populateScenePaths(std::filesystem::path &dirPath);
+    void populateSceneChildren();
+    void printGameObjects();
     void run();
 };
 

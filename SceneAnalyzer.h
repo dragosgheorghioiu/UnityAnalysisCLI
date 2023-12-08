@@ -1,7 +1,3 @@
-//
-// Created by dregos on 12/7/23.
-//
-
 #ifndef TOOL_SCENEANALYZER_H
 #define TOOL_SCENEANALYZER_H
 
@@ -17,6 +13,8 @@ private:
     std::ifstream sceneFile;
 public:
     explicit SceneAnalyzer(const std::string& scenePath);
+    static void parseYamlDocument(YAML::Node doc, std::vector<GameObject>& gameObjects, bool& afterGameObject, const std::string& line);
+    static std::string getFileId(const std::string& line);
     std::vector<GameObject> analyzeScene();
 };
 

@@ -22,17 +22,31 @@ void Process::populateScenePaths(std::filesystem::path &dirPath) {
     }
 }
 
-void Process::run() {
-    std::filesystem::path dirPath(args->getArgsList()[0]);
-    populateScenePaths(dirPath);
-    for (auto &scene: scenes) {
+void Process::printGameObjects() {
+    for (auto &scene : scenes) {
+        std::cout << scene.getScenePath() << std::endl;
+        for (auto &child : scene.getChildren()) {
+            std::cout << child.getName() << std::endl;
+            if (!child.getChildren().empty()) {
+                std::cout<<"Children: "<<std::endl;
+                for (auto &child2 : child.getChildren()) {
+                    std::cout << child2 << std::endl;
+                }
+            }
+        }
+    }
+}
+
+void Process::populateSceneChildren() {
+    for (auto &scene : scenes) {
         SceneAnalyzer analyzer(scene.getScenePath());
         scene.setChildren(analyzer.analyzeScene());
     }
-    for (auto &scene: scenes) {
-        std::cout << scene.getScenePath() << std::endl;
-        for (auto &gameObject: scene.getChildren()) {
-            std::cout << gameObject.getName() << std::endl;
-        }
-    }
+}
+
+void Process::run() {
+    std::filesystem::path dirPath(args->getArgsList()[0]);
+    populateScenePaths(dirPath);
+    populateSceneChildren();
+    printGameObjects();
 }
