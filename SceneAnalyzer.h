@@ -7,12 +7,13 @@
 #include <fstream>
 #include <iostream>
 #include <yaml-cpp/yaml.h>
+#include <filesystem>
 
 class SceneAnalyzer {
 private:
     std::ifstream sceneFile;
 public:
-    explicit SceneAnalyzer(const std::string& scenePath);
+    explicit SceneAnalyzer(const std::filesystem::path& scenePath);
     static void parseYamlDocument(YAML::Node doc, std::vector<GameObject>& gameObjects, bool& afterGameObject, const std::string& line);
     static std::string getFileId(const std::string& line);
     std::vector<GameObject> analyzeScene();

@@ -1,6 +1,6 @@
 #include "SceneAnalyzer.h"
 
-SceneAnalyzer::SceneAnalyzer(const std::string &scenePath) {
+SceneAnalyzer::SceneAnalyzer(const std::filesystem::path &scenePath) {
     sceneFile = std::ifstream(scenePath);
 }
 

@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "libs/yaml-cpp-0.8.0",
+		"source" : "libs/yaml-cpp-0.8.0"
+	}
+}

@@ -3,9 +3,14 @@ project(tool)
 
 set(CMAKE_CXX_STANDARD 23)
 
-find_package(yaml-cpp REQUIRED)
 
-add_executable(tool main.cpp
+set(YAML_CPP_DIR "./libs/yaml-cpp-0.8.0/")
+
+add_subdirectory(${YAML_CPP_DIR})
+
+# Add your source files
+add_executable(tool
+        main.cpp
         Args.cpp
         Args.h
         Process.cpp
@@ -15,6 +20,7 @@ add_executable(tool main.cpp
         GameObject.cpp
         GameObject.h
         Scene.cpp
-        Scene.h)
+        Scene.h
+)
 
-target_link_libraries(tool yaml-cpp)
+target_link_libraries(tool PRIVATE yaml-cpp)
