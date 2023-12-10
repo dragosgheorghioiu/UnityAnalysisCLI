@@ -1,0 +1,11 @@
+prefix=C:/Program Files (x86)/tool
+exec_prefix=${prefix}
+includedir=C:/Program Files (x86)/tool/include
+libdir=C:/Program Files (x86)/tool/lib
+
+Name: Yaml-cpp
+Description: A YAML parser and emitter for C++
+Version: 0.8.0
+Requires:
+Libs: -L${libdir} -lyaml-cpp
+Cflags: -I${includedir}

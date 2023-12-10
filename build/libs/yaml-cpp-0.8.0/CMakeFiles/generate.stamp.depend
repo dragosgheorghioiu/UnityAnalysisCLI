@@ -1,0 +1,21 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CTest.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CTestTargets.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CTestUseLaunchers.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/DartConfiguration.tcl.in
+C:/Program Files/CMake/share/cmake-3.28/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckFlagCommonConfig.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/CMakeFiles/cmake.verify_globs
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/libs/yaml-cpp-0.8.0/CMakeLists.txt
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/libs/yaml-cpp-0.8.0/cmake_uninstall.cmake.in
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/libs/yaml-cpp-0.8.0/yaml-cpp-config.cmake.in
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/libs/yaml-cpp-0.8.0/yaml-cpp.pc.in

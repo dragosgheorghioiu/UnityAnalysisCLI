@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\Args.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\Process.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\SceneAnalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\GameObject.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\Script.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\Args.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\Process.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\SceneAnalyzer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\GameObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\src\Script.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\drago\CLionProjects\UnityAnalysisCLI\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5006180E-13AA-3D0D-B5DA-3F45078542D0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9904DB6F-B7CF-36AE-A000-E0C28F56EC06}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

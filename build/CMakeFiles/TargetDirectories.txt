@@ -1,0 +1,13 @@
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/CMakeFiles/tool.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/CMakeFiles/Experimental.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/CMakeFiles/Nightly.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/CMakeFiles/Continuous.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/CMakeFiles/NightlyMemoryCheck.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/CMakeFiles/yaml-cpp.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/CMakeFiles/uninstall.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/CMakeFiles/ALL_BUILD.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/util/CMakeFiles/yaml-cpp-sandbox.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/util/CMakeFiles/yaml-cpp-parse.dir
+C:/Users/drago/CLionProjects/UnityAnalysisCLI/build/libs/yaml-cpp-0.8.0/util/CMakeFiles/yaml-cpp-read.dir
