@@ -1,10 +1,18 @@
 #include "SceneAnalyzer.h"
 
-SceneAnalyzer::SceneAnalyzer(const std::filesystem::path &scenePath) {
+SceneAnalyzer::SceneAnalyzer(const std::filesystem::path &scenePath, std::unordered_map<std::string, Script> *scripts) {
     sceneFile = std::ifstream(scenePath);
+    this->scripts = scripts;
 }
 
 void SceneAnalyzer::parseYamlDocument(YAML::Node doc, std::vector<GameObject>& gameObjects, bool& afterGameObject, const std::string& line) {
+    if (doc["MonoBehaviour"]) {
+        if (!doc["MonoBehaviour"]["m_Script"]) return;
+        std::string guid = doc["MonoBehaviour"]["m_Script"]["guid"].as<std::string>();
+        auto it = scripts->find(guid);
+        if (it == scripts->end()) return;
+        scripts->erase(it);
+    }
     if (doc["GameObject"]) {
         GameObject gameObject(doc["GameObject"]["m_Name"].as<std::string>(), SceneAnalyzer::getFileId(line));
         gameObjects.emplace_back(gameObject);

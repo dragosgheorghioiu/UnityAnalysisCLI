@@ -97,6 +97,14 @@ build CMakeFiles/tool.dir/Scene.cpp.obj: CXX_COMPILER__tool_unscanned_Debug C$:/
   OBJECT_DIR = CMakeFiles\tool.dir
   OBJECT_FILE_DIR = CMakeFiles\tool.dir
 
+build CMakeFiles/tool.dir/Script.cpp.obj: CXX_COMPILER__tool_unscanned_Debug C$:/Users/drago/CLionProjects/UnityAnalysisCLI/Script.cpp || cmake_object_order_depends_target_tool
+  DEFINES = -DYAML_CPP_STATIC_DEFINE
+  DEP_FILE = CMakeFiles\tool.dir\Script.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/drago/CLionProjects/UnityAnalysisCLI/libs/yaml-cpp-0.8.0/include
+  OBJECT_DIR = CMakeFiles\tool.dir
+  OBJECT_FILE_DIR = CMakeFiles\tool.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target tool
@@ -105,7 +113,7 @@ build CMakeFiles/tool.dir/Scene.cpp.obj: CXX_COMPILER__tool_unscanned_Debug C$:/
 #############################################
 # Link the executable tool.exe
 
-build tool.exe: CXX_EXECUTABLE_LINKER__tool_Debug CMakeFiles/tool.dir/main.cpp.obj CMakeFiles/tool.dir/Args.cpp.obj CMakeFiles/tool.dir/Process.cpp.obj CMakeFiles/tool.dir/SceneAnalyzer.cpp.obj CMakeFiles/tool.dir/GameObject.cpp.obj CMakeFiles/tool.dir/Scene.cpp.obj | libs/yaml-cpp-0.8.0/libyaml-cppd.a || libs/yaml-cpp-0.8.0/libyaml-cppd.a
+build tool.exe: CXX_EXECUTABLE_LINKER__tool_Debug CMakeFiles/tool.dir/main.cpp.obj CMakeFiles/tool.dir/Args.cpp.obj CMakeFiles/tool.dir/Process.cpp.obj CMakeFiles/tool.dir/SceneAnalyzer.cpp.obj CMakeFiles/tool.dir/GameObject.cpp.obj CMakeFiles/tool.dir/Scene.cpp.obj CMakeFiles/tool.dir/Script.cpp.obj | libs/yaml-cpp-0.8.0/libyaml-cppd.a || libs/yaml-cpp-0.8.0/libyaml-cppd.a
   FLAGS = -g
   LINK_LIBRARIES = libs/yaml-cpp-0.8.0/libyaml-cppd.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\tool.dir

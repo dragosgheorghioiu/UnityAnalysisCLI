@@ -4,7 +4,34 @@ Process::Process(int argc, char **argv) {
     args = std::make_unique<Args>(argc, argv);
 }
 
-void Process::populateScenePaths(std::filesystem::path &inputPath) {
+void Process::searchForScriptsInDir(const std::filesystem::path &dirPath) {
+    for (const auto &entry: std::filesystem::directory_iterator(dirPath)) {
+        if (std::filesystem::is_directory(entry.path())) {
+            searchForScriptsInDir(entry.path());
+            continue;
+        }
+        if (entry.path().filename().extension() == ".cs") {
+            Script script(entry.path(), args->getArgsList()[0]);
+            scripts.emplace(script.getGuid(), script);
+        }
+    }
+}
+
+void Process::populateAllScripts(std::filesystem::path dirPath) {
+    dirPath /= "Assets";
+    dirPath /= "Scripts";
+    try {
+        if (std::filesystem::is_directory(dirPath)) {
+            searchForScriptsInDir(dirPath);
+        } else {
+            std::cout << "The provided directory is not a valid Unity Project." << std::endl;
+        }
+    } catch (const std::filesystem::filesystem_error &e) {
+        std::cerr << "[ERROR]: " << e.what() << std::endl;
+    }
+}
+
+void Process::populateScenePaths(std::filesystem::path inputPath) {
     inputPath /= "Assets";
     inputPath /= "Scenes";
     try {
@@ -22,9 +49,9 @@ void Process::populateScenePaths(std::filesystem::path &inputPath) {
     }
 }
 
-void Process::populateSceneChildren() {
+void Process::analyzeProject() {
     for (auto &scene : scenes) {
-        SceneAnalyzer analyzer(scene.getScenePath());
+        SceneAnalyzer analyzer(scene.getScenePath(), &scripts);
         std::vector<GameObject> children = analyzer.analyzeScene();
         scene.setChildren(children);
         scene.setGameObjectMap(SceneAnalyzer::getGameObjectMap(children));
@@ -63,21 +90,30 @@ void Process::printSceneHierarchy(const Scene &scene, std::ofstream &fout) {
     }
 }
 
-void Process::run() {
-    std::filesystem::path inputPath(args->getArgsList()[0]);
-    createOutputDirectory();
+void Process::dumpSceneHeirarchy() {
     std::filesystem::path outputPath(args->getArgsList()[1]);
-    populateScenePaths(inputPath);
-    populateSceneChildren();
     for (auto &scene : scenes) {
         std::ofstream file = std::ofstream(outputPath / (scene.getScenePath().filename().string() + ".dump"), std::ios::trunc);
         printSceneHierarchy(scene, file);
-
-        // delete last newline to match output example
-        long pos = file.tellp();
-        file.seekp(pos - 1);
-        file.write("", 1);
-
         file.close();
     }
+}
+
+void Process::createUnusedScriptCSV(const std::unordered_map<std::string, Script> &scripts, const std::filesystem::path &outputPath) {
+    std::ofstream file = std::ofstream(outputPath / "UnusedScripts.csv", std::ios::trunc);
+    file << "Relative Path,GUID\n";
+    for (auto &[guid, script] : scripts) {
+        file << script.getRelativePath() << "," << script.getGuid() << "\n";
+    }
+    file.close();
+}
+
+void Process::run() {
+    std::filesystem::path inputPath(args->getArgsList()[0]);
+    createOutputDirectory();
+    populateScenePaths(inputPath);
+    populateAllScripts(inputPath);
+    analyzeProject();
+    dumpSceneHeirarchy();
+    createUnusedScriptCSV(scripts, args->getArgsList()[1]);
 }

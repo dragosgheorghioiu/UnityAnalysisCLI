@@ -10,20 +10,73 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated />
+    <generated>
+      <config projectName="tool" targetName="uninstall" />
+      <config projectName="tool" targetName="ContinuousSubmit" />
+      <config projectName="tool" targetName="ContinuousMemCheck" />
+      <config projectName="tool" targetName="NightlyTest" />
+      <config projectName="tool" targetName="ContinuousCoverage" />
+      <config projectName="tool" targetName="NightlyBuild" />
+      <config projectName="tool" targetName="NightlyStart" />
+      <config projectName="tool" targetName="tool" />
+      <config projectName="tool" targetName="NightlyCoverage" />
+      <config projectName="tool" targetName="Continuous" />
+      <config projectName="tool" targetName="ContinuousTest" />
+      <config projectName="tool" targetName="yaml-cpp-read" />
+      <config projectName="tool" targetName="NightlyMemoryCheck" />
+      <config projectName="tool" targetName="ExperimentalMemCheck" />
+      <config projectName="tool" targetName="ContinuousConfigure" />
+      <config projectName="tool" targetName="yaml-cpp-parse" />
+      <config projectName="tool" targetName="ContinuousStart" />
+      <config projectName="tool" targetName="NightlyConfigure" />
+      <config projectName="tool" targetName="ExperimentalSubmit" />
+      <config projectName="tool" targetName="NightlyUpdate" />
+      <config projectName="tool" targetName="NightlySubmit" />
+      <config projectName="tool" targetName="ContinuousBuild" />
+      <config projectName="tool" targetName="ExperimentalUpdate" />
+      <config projectName="tool" targetName="Nightly" />
+      <config projectName="tool" targetName="ContinuousUpdate" />
+      <config projectName="tool" targetName="yaml-cpp" />
+      <config projectName="tool" targetName="ExperimentalStart" />
+      <config projectName="tool" targetName="ExperimentalBuild" />
+      <config projectName="tool" targetName="NightlyMemCheck" />
+      <config projectName="tool" targetName="ExperimentalCoverage" />
+      <config projectName="tool" targetName="Experimental" />
+      <config projectName="tool" targetName="ExperimentalConfigure" />
+      <config projectName="tool" targetName="yaml-cpp-sandbox" />
+      <config projectName="tool" targetName="ExperimentalTest" />
+    </generated>
   </component>
   <component name="CMakeSettings">
     <configurations>
+      <configuration PROFILE_NAME="Release" ENABLED="true" CONFIG_NAME="Release" />
       <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="40eab3bc-ed6d-48b8-a656-0b0b12fab0e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/tool.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Script.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Script.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Process.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Process.h" beforeDir="false" afterPath="$PROJECT_DIR$/Process.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneAnalyzer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SceneAnalyzer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneAnalyzer.h" beforeDir="false" afterPath="$PROJECT_DIR$/SceneAnalyzer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-1f09c179e231d8f309f5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2023-12-09T01-07-58-0929.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-tool-Debug-ff875908e15599a0274a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tool.dir/Process.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tool.dir/Process.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tool.dir/SceneAnalyzer.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tool.dir/SceneAnalyzer.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tool.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/tool.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/tool.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/tool.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,9 +86,12 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
@@ -50,30 +106,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;dynamic.analysis.tools.valgrind&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/drago/CLionProjects/UnityAnalysisCLI/libs",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CMakeSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\drago\CLionProjects\UnityAnalysisCLI\libs" />
+      <recent name="C:\Users\drago\CLionProjects\UnityAnalysisCLI\libs\yaml-cpp" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tool" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="$USER_HOME$/jetbrains/TestCase01 $USER_HOME$/jetbrains/test_output" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Project" TARGET_NAME="tool" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Project" RUN_TARGET_NAME="tool">
+    <configuration name="tool" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="C:\Users\drago\Documents\jet\TestCase01 C:\Users\drago\Documents\jet\out" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="tool" TARGET_NAME="tool" CONFIG_NAME="Release" RUN_TARGET_PROJECT_NAME="tool" RUN_TARGET_NAME="tool">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -96,6 +161,8 @@
       <workItem from="1702030233674" duration="804000" />
       <workItem from="1702051222576" duration="7611000" />
       <workItem from="1702063999837" duration="2893000" />
+      <workItem from="1702159576894" duration="65000" />
+      <workItem from="1702159656008" duration="8665000" />
     </task>
     <servers />
   </component>
