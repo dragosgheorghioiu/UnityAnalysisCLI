@@ -16,4 +16,8 @@ cmake ..
 ## Usage
 ```
 tool.exe /path/to/unity/project /path/to/output
-``` 
+```
+
+## Libraries
+- [yaml-cpp](https://github.com/jbeder/yaml-cpp/)
+- [OpenMP](https://www.openmp.org/)
