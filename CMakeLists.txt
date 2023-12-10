@@ -21,6 +21,8 @@ add_executable(tool
         GameObject.h
         Scene.cpp
         Scene.h
+        Script.cpp
+        Script.h
 )
 
 target_link_libraries(tool PRIVATE yaml-cpp)
