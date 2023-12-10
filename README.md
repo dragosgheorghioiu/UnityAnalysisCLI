@@ -5,6 +5,7 @@ The tool is used to analyze Unity projects and it can achieve the following func
 - `.unity` file parsing
 - dumps the scene hierarchy
 - dumps unused scripts in a csv file
+- paralelized using OpenMP
 
 ## Build
 ```
