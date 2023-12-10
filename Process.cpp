@@ -42,7 +42,8 @@ void Process::populateScenePaths(std::filesystem::path inputPath) {
                 }
             }
         } else {
-            std::cout << "The provided directory is not a valid Unity Project." << std::endl;
+            std::cerr << "[ERROR]: The provided directory is not a valid Unity Project." << std::endl;
+            exit(1);
         }
     } catch (const std::filesystem::filesystem_error &e) {
         std::cerr << "[ERROR]: " << e.what() << std::endl;
@@ -99,7 +100,7 @@ void Process::dumpSceneHeirarchy() {
     }
 }
 
-void Process::createUnusedScriptCSV(const std::unordered_map<std::string, Script> &scripts, const std::filesystem::path &outputPath) {
+void Process::createUnusedScriptCSV(const std::filesystem::path &outputPath) {
     std::ofstream file = std::ofstream(outputPath / "UnusedScripts.csv", std::ios::trunc);
     file << "Relative Path,GUID\n";
     for (auto &[guid, script] : scripts) {
@@ -110,10 +111,10 @@ void Process::createUnusedScriptCSV(const std::unordered_map<std::string, Script
 
 void Process::run() {
     std::filesystem::path inputPath(args->getArgsList()[0]);
-    createOutputDirectory();
     populateScenePaths(inputPath);
     populateAllScripts(inputPath);
+    createOutputDirectory();
     analyzeProject();
     dumpSceneHeirarchy();
-    createUnusedScriptCSV(scripts, args->getArgsList()[1]);
+    createUnusedScriptCSV(args->getArgsList()[1]);
 }
