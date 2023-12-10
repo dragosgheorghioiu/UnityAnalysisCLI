@@ -5,6 +5,9 @@
 #include <string>
 #include <vector>
 
+/**
+ * Class to represent a game object.
+ */
 class GameObject {
 private:
     std::string name;

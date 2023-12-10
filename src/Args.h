@@ -6,6 +6,9 @@
 #include <string>
 #include <vector>
 
+/**
+ * Class to handle command line arguments.
+ */
 class Args {
 private:
     std::vector<std::string> argList;

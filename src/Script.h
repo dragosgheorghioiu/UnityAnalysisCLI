@@ -6,6 +6,9 @@
 #include <filesystem>
 #include "yaml-cpp/yaml.h"
 
+/**
+ * Class to represent a script.
+ */
 class Script {
 private:
    std::string guid;

@@ -10,6 +10,9 @@
 #include "yaml-cpp/yaml.h"
 #include <filesystem>
 
+/**
+ * Class to analyze a scene file.
+ */
 class SceneAnalyzer {
 private:
     std::ifstream sceneFile;

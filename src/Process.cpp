@@ -4,6 +4,10 @@ Process::Process(int argc, char **argv) {
     args = std::make_unique<Args>(argc, argv);
 }
 
+/**
+ * Recursively searches for scripts in the provided directory.
+ * @param dirPath The directory to search in.
+ */
 void Process::searchForScriptsInDir(const std::filesystem::path &dirPath) {
     for (const auto &entry: std::filesystem::directory_iterator(dirPath)) {
         if (std::filesystem::is_directory(entry.path())) {
@@ -17,6 +21,10 @@ void Process::searchForScriptsInDir(const std::filesystem::path &dirPath) {
     }
 }
 
+/**
+ * Searches for scripts in the Assets/Scripts directory.
+ * @param dirPath The directory to search in.
+ */
 void Process::populateAllScripts(std::filesystem::path dirPath) {
     dirPath /= "Assets";
     dirPath /= "Scripts";
@@ -31,6 +39,10 @@ void Process::populateAllScripts(std::filesystem::path dirPath) {
     }
 }
 
+/**
+ * Searches for scenes in the Assets/Scenes directory.
+ * @param inputPath The directory to search in.
+ */
 void Process::populateScenePaths(std::filesystem::path inputPath) {
     inputPath /= "Assets";
     inputPath /= "Scenes";
@@ -50,8 +62,11 @@ void Process::populateScenePaths(std::filesystem::path inputPath) {
     }
 }
 
+/**
+ * Analyzes the project by analyzing each scene.
+ */
 void Process::analyzeProject() {
-#pragma omp parallel for
+#pragma omp parallel for default(none) shared(scenes, scripts)
     for (auto &scene : scenes) {
         SceneAnalyzer analyzer(scene.getScenePath(), &scripts);
         std::vector<GameObject> children = analyzer.analyzeScene();
@@ -60,6 +75,13 @@ void Process::analyzeProject() {
     }
 }
 
+/**
+ * Prints the child of a GameObject.
+ * @param child The child to print.
+ * @param gameObjectMap The map of GameObjects.
+ * @param depth The depth of the child.
+ * @param fout The output file stream.
+ */
 void Process::printChild(const std::string &child, const std::map<int, GameObject> &gameObjectMap, const int &depth, std::ofstream &fout) {
     for (int i = 0; i < depth; i++) {
         fout << "--";
@@ -71,6 +93,9 @@ void Process::printChild(const std::string &child, const std::map<int, GameObjec
     }
 }
 
+/**
+ * Creates the output directory.
+ */
 void Process::createOutputDirectory() {
     std::filesystem::path inputPath(args->getArgsList()[1]);
     try {
@@ -81,6 +106,11 @@ void Process::createOutputDirectory() {
     }
 }
 
+/**
+ * Prints the scene hierarchy to a file.
+ * @param scene The scene to print.
+ * @param fout The output file stream.
+ */
 void Process::printSceneHierarchy(const Scene &scene, std::ofstream &fout) {
     std::map<int, GameObject> gameObjectMap = scene.getGameObjectMap();
     for (auto &[id, gameObject] : gameObjectMap) {
@@ -92,6 +122,9 @@ void Process::printSceneHierarchy(const Scene &scene, std::ofstream &fout) {
     }
 }
 
+/**
+ * Dumps the scene hierarchy to a file.
+ */
 void Process::dumpSceneHeirarchy() {
     std::filesystem::path outputPath(args->getArgsList()[1]);
     for (auto &scene : scenes) {
@@ -101,6 +134,9 @@ void Process::dumpSceneHeirarchy() {
     }
 }
 
+/**
+ * Creates the UnusedScripts.csv file.
+ */
 void Process::createUnusedScriptCSV() {
     std::filesystem::path outputPath(args->getArgsList()[1]);
     std::ofstream file = std::ofstream(outputPath / "UnusedScripts.csv", std::ios::trunc);
@@ -111,6 +147,9 @@ void Process::createUnusedScriptCSV() {
     file.close();
 }
 
+/**
+ * Runs the process.
+ */
 void Process::run() {
     std::filesystem::path inputPath(args->getArgsList()[0]);
     #pragma omp parallel num_threads(3) shared(inputPath)

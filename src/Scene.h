@@ -12,6 +12,9 @@
 #include <map>
 #include "GameObject.h"
 
+/**
+ * Class to represent a scene.
+ */
 class Scene {
 private:
     std::vector<GameObject> children;
