@@ -3,7 +3,6 @@
 GameObject::GameObject(const std::string& name, const std::string& id) {
     this->name = name;
     this->id = id;
-    this->parent_id = parent_id;
     this->children = std::vector<std::string>();
 }
 
